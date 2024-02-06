@@ -5,6 +5,6 @@ from projects.models import Project
 def list_projects(request):
     list_of_projects = Project.objects.all()
     context = {
-        "list_of_projects": list_of_projects,
+        "list_projects": list_projects
     }
     return render(request, "projects/projects.html", context)
