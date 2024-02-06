@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>{{ proj.name }}</h1>
+            <p>{{ proj.description }}</p>
+            <h2>Tasks</h2>
+            <p>
+                <a href="{% url 'create_task' %}">Create a new task</a>
+            </p>
+            {% if proj.tasks.all|length > 0 %}
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Assignee</th>
+                    <th>Start date</th>
+                    <th>Due date</th>
+                    <th>Is completed</th>
+                </thead>
+                <tbody>
+                    {% for item in proj.tasks.all %}
+                    <tr>
+                        <td>{{ item.name }}hello</td>
+                        <td>{{ item.assignee }}hello</td>
+                        <td>{{ item.start_date }}hello</td>
+                        <td>{{ item.due_date }}hello</td>
+                        <td>{{ item.is_completed|yesno:"yes,no" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>This project has no tasks</p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>
