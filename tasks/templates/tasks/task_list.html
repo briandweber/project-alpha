@@ -8,35 +8,28 @@
 <body>
     <main>
         <div>
-            <h1>{{ proj.name }}</h1>
-            <p>{{ proj.description }}</p>
-            <h2>Tasks</h2>
-            <p>
-                <a href="{% url 'create_task' %}">Create a new task</a>
-            </p>
-            {% if proj.tasks.all|length > 0 %}
+            <h1>My Tasks</h1>
+            {% if tasks|length > 0 %}
             <table>
                 <thead>
                     <th>Name</th>
-                    <th>Assignee</th>
-                    <th>Start date</th>
-                    <th>Due date</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
                     <th>Is completed</th>
                 </thead>
                 <tbody>
-                    {% for item in proj.tasks.all %}
+                    {% for item in tasks %}
                     <tr>
                         <td>{{ item.name }}</td>
-                        <td>{{ item.assignee }}</td>
                         <td>{{ item.start_date }}</td>
                         <td>{{ item.due_date }}</td>
-                        <td>{{ item.is_completed|yesno:"yes,no" }}</td>
+                        <td>{{ item.is_completed }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             {% else %}
-            <p>This project has no tasks</p>
+            <p>You have no tasks</p>
             {% endif %}
         </div>
     </main>
