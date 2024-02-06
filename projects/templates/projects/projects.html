@@ -9,6 +9,7 @@
     <main>
         <div>
             <h1>My Projects</h1>
+            {% if user.is_authenticated %}
             {% if list_of_projects|length == 0 %}
             <p>You are not assigned to any projects</p>
             {% else %}
@@ -25,6 +26,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            {% endif %}
             {% endif %}
         </div>
     </main>

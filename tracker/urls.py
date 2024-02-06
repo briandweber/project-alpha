@@ -23,8 +23,8 @@ def redirect_to_home(request):
     return redirect("home")
 
 urlpatterns = [
-    path("", redirect_to_home, name="home"),
+    path("", redirect_to_home),
     path("admin/", admin.site.urls),
-    path("", include("projects.urls")),
+    path("projects/", include("projects.urls")),
     path("accounts/", include("accounts.urls"))
 ]
