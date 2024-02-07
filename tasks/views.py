@@ -3,7 +3,6 @@ from tasks.models import Task
 from tasks.forms import CreateTaskForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 
 @login_required
 def create_task(request):
