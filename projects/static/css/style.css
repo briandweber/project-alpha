@@ -57,7 +57,7 @@ nav li {
 }
 
 main {
-    background-color: #FAFBFE;
+    background-color: ##F8F9FE;
     width: 100vw;
 }
 
@@ -103,5 +103,22 @@ main {
 .signup-background h1 {
     text-align: center;
     font-size: xx-large;
+    padding: 20px;
+}
+
+.menu-header ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    background-color: #313A46;
+    color: white;
+    width: 100vw;
+    height: 75px;
+}
+
+.menu-header li {
+    display: flex;
+    align-items: center;
     padding: 20px;
 }

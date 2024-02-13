@@ -24,8 +24,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
                                 <path
                                     d="M240-280h240v-80H240v80Zm120-160h240v-80H360v80Zm120-160h240v-80H480v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
-                            </svg>
-<a href="#">Timeline</a>
+                            </svg><a href="#">Timeline</a>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
@@ -34,8 +33,7 @@
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
-                                <path
-                                    d="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                <path d="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
                             </svg><a href="{% url 'show_my_tasks' %}">Tasks</a>
                         </li>
                         <li>
@@ -57,6 +55,14 @@
             </header>
         </div>
     <main>
+        <div class="menu-header">
+            <ul>
+                <li>Page title</li>
+                <li>Search</li>
+                <li>Logout</li>
+                <li>Profile</li>
+            </ul>
+        </div>
         {% block content %}
         {% endblock content %}
     </main>
