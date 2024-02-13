@@ -4,14 +4,14 @@
     Log In
 {% endblock title %}
 {% block content %}
-    <main>
+
         <div>
             <h1>Login</h1>
-            <form method="post">
+            <form class="login-form" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button>Login</button>
+                <button class="button">Login</button>
             </form>
         </div>
-    </main>
+
 {% endblock content %}
