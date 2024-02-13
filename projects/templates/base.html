@@ -1,23 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
         <title>
             {% block title %}
             {% endblock title %}
         </title>
     </head>
     <body>
-        <header>
+    <div class="container">
+        <div class="sidebar">
+            <header>
             <nav>
                 <ul>
                     {% if user.is_authenticated %}
                         <li>
-                            <a href="{% url 'show_my_tasks' %}">My tasks</a>
+                            <a href="#">Timeline</a>
                         </li>
                         <li>
-                            <a href="{% url 'list_projects' %}">My projects</a>
+                            <a href="{% url 'show_my_tasks' %}">Tasks</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'list_projects' %}">Projects</a>
                         </li>
                         <li>
                             <a href="{% url 'logout' %}">Logout</a>
@@ -32,8 +39,10 @@
                     {% endif %}
                 </ul>
             </nav>
-        </header>
+            </header>
+        </div>
         {% block content %}
         {% endblock content %}
+    </div>
     </body>
 </html>
