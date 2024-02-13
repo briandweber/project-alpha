@@ -44,6 +44,8 @@ nav a:hover {
     padding-top: 8px;
     fill: white;
     left: 0;
+    margin-right: auto;
+    padding-left: 40px;
 }
 
 nav li {
