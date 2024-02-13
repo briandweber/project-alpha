@@ -106,19 +106,25 @@ main {
     padding: 20px;
 }
 
-.menu-header ul {
+.menu-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     list-style: none;
-    background-color: #313A46;
+    background-color: white;
     color: white;
     width: 100vw;
     height: 75px;
+    right: 0;
 }
 
 .menu-header li {
     display: flex;
     align-items: center;
     padding: 20px;
+    color: #313A46;
+}
+
+.menu-header li:last-child {
+    margin-left: 600px;
 }
