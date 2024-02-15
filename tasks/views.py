@@ -32,7 +32,7 @@ def view_tasks(request):
 def task_search_feature(request):
     if request.method == "POST":
         search_query = request.POST['search_query']
-        tasks = Task.objects.filter(name__contains=search_query)
+        tasks = Task.objects.filter(name__icontains=search_query)
         context = {
             "query": search_query,
             "tasks": tasks,

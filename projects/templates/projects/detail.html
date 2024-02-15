@@ -6,13 +6,13 @@
 {% block content %}
 
         <div>
-            <h1>{{ proj.name }}</h1>
-            <p>{{ proj.description }}</p>
+            <h1>{{ project.name }}</h1>
+            <p>{{ project.description }}</p>
             <h2>Tasks</h2>
             <p>
                 <a href="{% url 'create_task' %}">Create a new task</a>
             </p>
-            {% if proj.tasks.all|length > 0 %}
+            {% if project.tasks.all|length > 0 %}
                 <table>
                     <thead>
                         <th>Name</th>
@@ -22,7 +22,7 @@
                         <th>Is completed</th>
                     </thead>
                     <tbody>
-                        {% for item in proj.tasks.all %}
+                        {% for item in project.tasks.all %}
                             <tr>
                                 <td>{{ item.name }}</td>
                                 <td>{{ item.assignee }}</td>

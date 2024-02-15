@@ -13,9 +13,9 @@ def list_projects(request):
 
 @login_required
 def show_project(request, id):
-    proj = get_object_or_404(Project, id=id)
+    project = get_object_or_404(Project, id=id)
     context = {
-        "proj": proj,
+        "project": project,
     }
     return render(request, "projects/detail.html", context)
 

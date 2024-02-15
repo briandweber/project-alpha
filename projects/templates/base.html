@@ -57,7 +57,7 @@
             </nav>
             </header>
         </div>
-    <main>
+    <main>{% if user.is_authenticated %}
         <div class="head_menu">
                 <li>
                     <form method="post" role="search" action="{% url 'project_search_feature' %}">
@@ -76,6 +76,7 @@
                 <li>Profile</li>
 
         </div>
+        {% endif %}
         {% block content %}
         {% endblock content %}
     </main>

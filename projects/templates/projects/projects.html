@@ -22,10 +22,10 @@
                         <tbody>
                             {% for item in list_of_projects %}
                                 <tr>
-                                    <td>
+                                    <td class="task-item">
                                         <a href="{% url 'show_project' item.id %}">{{ item.name }}</a>
                                     </td>
-                                    <td>{{ item.tasks.all|length }}</td>
+                                    <td class="task-item">{{ item.tasks.all|length }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

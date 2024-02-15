@@ -77,15 +77,16 @@ main {
 }
 
 .login-form {
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
     padding: 2em;
+    background-color: white;
 }
 
 .signup-form {
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
@@ -109,6 +110,21 @@ main {
 }
 
 .signup-background h1 {
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.login-background {
+    background-image: url("/static/css/notepad.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-background h1 {
     text-align: center;
     font-size: xx-large;
     padding: 20px;
@@ -138,17 +154,31 @@ main {
 }
 
 .task-item {
-    padding: 4px 10px 4px;
+    padding: 15px 50px 15px;
     font-size: 16px;
     font-family: 'Lucida Grande', Verdana, sans-serif;
     line-height: 20px;
     border: solid 1px #dddddd;
     border-radius: 5px;
     flex-grow: 1;
+    list-style: none;
+    box-shadow: 10px 5px 5px #dddddd;
+    width: 50%;
+    text-align: center;
 }
 
 input {
     height: 1.5em;
     margin: 0;
     padding: .25em .5em;
+}
+
+.no-results {
+    font-size: 3em;
+}
+
+.signup-link {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
 }
