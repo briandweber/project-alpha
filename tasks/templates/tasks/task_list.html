@@ -7,6 +7,11 @@
 
         <div>
             <h1>My Tasks</h1>
+            <div>
+                <p>
+                    <a href="{% url 'create_task' %}">Create a task</a>
+                </p>
+            </div>
             {% if tasks|length > 0 %}
                 <table>
                     <thead>
@@ -17,11 +22,11 @@
                     </thead>
                     <tbody>
                         {% for item in tasks %}
-                            <tr>
-                                <td>{{ item.name }}</td>
-                                <td>{{ item.start_date }}</td>
-                                <td>{{ item.due_date }}</td>
-                                <td>{{ item.is_completed }}</td>
+                            <tr class="task-item">
+                                <td class="task-item"><a href="{% url 'show_task' item.id %}">{{ item.name }}</a></td>
+                                <td class="task-item">{{ item.start_date }}</td>
+                                <td class="task-item">{{ item.due_date }}</td>
+                                <td class="task-item">{{ item.is_completed }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>

@@ -58,8 +58,14 @@ nav li {
     font-weight: 700;
 }
 
+nav h1 {
+    font-size: 25px;
+    margin: 20px 35px 0 10px;
+    text-align: center;
+}
+
 main {
-    background-color: ##F8F9FE;
+    background-color: #F8F9FE;
     width: 100vw;
 }
 
@@ -108,7 +114,7 @@ main {
     padding: 20px;
 }
 
-.menu-header {
+.head_menu {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -120,13 +126,29 @@ main {
     right: 0;
 }
 
-.menu-header li {
+.head_menu li {
     display: flex;
     align-items: center;
     padding: 20px;
     color: #313A46;
 }
 
-.menu-header li:last-child {
+.head_menu li:last-child {
     margin-left: 600px;
+}
+
+.task-item {
+    padding: 4px 10px 4px;
+    font-size: 16px;
+    font-family: 'Lucida Grande', Verdana, sans-serif;
+    line-height: 20px;
+    border: solid 1px #dddddd;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+input {
+    height: 1.5em;
+    margin: 0;
+    padding: .25em .5em;
 }

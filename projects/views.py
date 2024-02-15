@@ -35,3 +35,20 @@ def create_project(request):
         "form": form,
     }
     return render(request, "projects/create_project.html", context)
+
+
+@login_required
+def project_search_feature(request):
+    if request.method == "POST":
+        search_query = request.POST['search_query']
+        projects = Project.objects.filter(name__icontains=search_query)
+        context = {
+            "query": search_query,
+            "projects": projects
+        }
+        return render(request, "projects/project_search_results.html", context)
+    else:
+        context = {
+            "query": search_query,
+        }
+        return render(request, "projects/project_search_results.html", context)

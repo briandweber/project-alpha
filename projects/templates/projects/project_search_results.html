@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Projects Search Results{% endblock title %}
+{% block content %}
+
+{% if projects %}
+{% for project in projects %}
+<div>
+    <li>
+        <a href="{% url 'show_project' project.id %'}">{{ project.name }}</a>
+    </li>
+</div>
+{% endfor %}
+{% else %}
+<h1>No project search results found for "{{ query }}"</h1>
+<h1>Please enter a search query</h1>
+{% endif %}
+{% endblock content %}

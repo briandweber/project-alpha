@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% if tasks %}
+{% for task in tasks %}
+<div>
+    <li>
+        <a href="{% url 'show_task' task.id %}">{{ task.name }}</a>
+    </li>
+</div>
+{% endfor %}
+{% else %}
+<h1>No task search results found for "{{ query }}"</h1>
+<h1>Please enter a search query</h1>
+{% endif %}
+{% endblock content %}
