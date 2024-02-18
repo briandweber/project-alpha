@@ -164,7 +164,7 @@ main {
     list-style: none;
     box-shadow: 10px 5px 5px #dddddd;
     width: 50%;
-    text-align: center;
+    text-align: left;
 }
 
 input {

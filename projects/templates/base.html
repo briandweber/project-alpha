@@ -73,7 +73,11 @@
                         <button class="button" type="submit">Search</button>
                     </form>
                 </li>
-                <li>Profile</li>
+                <li>
+                    {{ user.username }}
+                    <a href="{% url "edit_user" %}">Edit my profile</a>
+
+                </li>
 
         </div>
         {% endif %}
