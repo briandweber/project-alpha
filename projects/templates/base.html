@@ -73,17 +73,49 @@
                         <button class="button" type="submit">Search</button>
                     </form>
                 </li>
-                <li>
-                    {{ user.username }}
-                    <a href="{% url "edit_user" %}">Edit my profile</a>
-
+                <li onclick=showSidebar()>Edit
+                    <a href="#">{{ user.profile.first_name }}</a>
                 </li>
-
+        </div>
+        <div class="user-sidebar">
+            <ul>
+                <li onclick=hideSidebar()>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a>
+                </li>
+                <li>
+                    {{ user.profile.first_name }} {{ user.profile.last_name }}<br />
+                    {{ user.username }}<a href="{% url 'edit_user' %}">Edit</a>
+                </li>
+                <li>
+                    {{ user.profile.email }}<a href="{% url 'edit_user' %}">Edit</a>
+                </li>
+                <li>
+                    <a href="{% url 'edit_user' %}">Edit profile</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                    </svg><a href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
         </div>
         {% endif %}
         {% block content %}
         {% endblock content %}
     </main>
     </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.user-sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.user-sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
     </body>
 </html>
